@@ -16,7 +16,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSLog(@"Application loaded and ready to interract with user.");
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"Application restore to background.");
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"Application ready to go to background.");
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"Application go to foreground soon.");
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"Application terminated");
 }
 
 
